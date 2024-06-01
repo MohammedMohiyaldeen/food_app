@@ -9,7 +9,7 @@ class CustomAppBar extends StatelessWidget {
     return AppBar(
         actions: [
           IconButton(
-            icon: const Icon(Icons.notifications),
+            icon: const Icon(Icons.notifications,color: AppColors.primary,),
             onPressed: () {},
           ),
         ],
@@ -28,13 +28,13 @@ class CustomAppBar extends StatelessWidget {
               children: [
                 Icon(
                   Icons.location_on,
-                  color: AppColors.green,
+                  color: AppColors.primary,
                 ),
                 SizedBox(
                   width: 4,
                 ),
                 Text(
-                  'Cairo, Egypt',
+                  'Jenin, Palestine',
                   style: TextStyle(
                     fontSize: 20,
                   ),

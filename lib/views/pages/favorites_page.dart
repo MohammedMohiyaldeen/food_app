@@ -22,7 +22,7 @@ class _favpageState extends State<favpage> {
             padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 15),
             child: DecoratedBox(
               decoration: BoxDecoration(
-                  color: AppColors.white,
+                  color: AppColors.primary,
                   borderRadius: BorderRadius.circular(16),
                   border: Border.all(color: AppColors.primary)),
               child: Padding(
@@ -43,7 +43,7 @@ class _favpageState extends State<favpage> {
                           pro.category.name,
                           style: TextStyle(
                               fontSize: 20,
-                              color: AppColors.primary,
+                              color: AppColors.white,
                               fontWeight: FontWeight.bold),
                         ))),
                     Column(
@@ -51,16 +51,16 @@ class _favpageState extends State<favpage> {
                         Text(
                           pro.name,
                           style: TextStyle(
-                              color: AppColors.primary,
+                              color: AppColors.white,
                               fontWeight: FontWeight.bold),
                         ),
                         SizedBox(
                           height: 10,
                         ),
                         Text(
-                          pro.price.toString(),
+                          "\$${pro.price.toString()}",
                           style: TextStyle(
-                              color: AppColors.primary,
+                              color: AppColors.white,
                               fontWeight: FontWeight.bold),
                         ),
                       ],
@@ -68,19 +68,20 @@ class _favpageState extends State<favpage> {
                     InkWell(
                       onTap: () {
                         setState(() {
-                          dummyProducts[int.parse(favproduct[index].id)-1].selfav = 0;
+                          dummyProducts[int.parse(favproduct[index].id) - 1]
+                              .selfav = 0;
                           favproduct.remove(favproduct[index]);
-                          
                         });
                       },
                       child: Container(
                         decoration: BoxDecoration(
-                            shape: BoxShape.circle, color: Colors.red),
+                            shape: BoxShape.circle, color: AppColors.white),
                         child: Padding(
-                          padding: const EdgeInsets.only(bottom: 13.0),
+                          padding: const EdgeInsets.only(bottom: 15.0),
                           child: Icon(
                             Icons.minimize,
-                            color: Colors.white,
+                            
+                            color: AppColors.primary,
                           ),
                         ),
                       ),
